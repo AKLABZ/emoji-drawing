@@ -64,7 +64,8 @@ document.addEventListener('touchmove', function(event) {
   }
 });
 
-document.body.addEventListener('touchmove', function(event) {
-  event.preventDefault();
+document.body.addEventListener('touchmove', function(e) {
+  if (isMouseDown) {
+    e.preventDefault();
+  }
 }, { passive: false });
-
