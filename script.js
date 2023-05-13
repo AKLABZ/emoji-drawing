@@ -40,14 +40,16 @@ document.addEventListener('mousemove', function(event) {
 });
 
 document.addEventListener('touchstart', function(event) {
-  if (event.touches.length === 1) {
-    isMouseDown = true;
-  }
+  isMouseDown = true;
+  event.preventDefault();
+});
+
+document.addEventListener('touchend', function(event) {
+  isMouseDown = false;
 });
 
 document.addEventListener('touchmove', function(event) {
   if (isMouseDown) {
-    event.preventDefault();
     const emoji = emojis[Math.floor(Math.random() * emojis.length)];
     const div = document.createElement('div');
     div.textContent = emoji;
@@ -60,8 +62,4 @@ document.addEventListener('touchmove', function(event) {
       div.style.opacity = 1;
     }, 10);
   }
-});
-
-document.addEventListener('touchend', function(event) {
-  isMouseDown = false;
 });
