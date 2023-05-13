@@ -4,6 +4,7 @@ html, body {
 }
 
 header {
+  font-color: black;
   font-family: 'Open Sans', sans-serif;
   font-size: 36px;
   font-weight: bold;
