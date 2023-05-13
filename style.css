@@ -4,23 +4,25 @@ html, body {
 }
 
 header {
+  background-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-family: 'Open Sans', sans-serif;
   font-size: 36px;
   font-weight: bold;
   text-align: center;
-  background-image: linear-gradient(to right, #F94144, #F3722C, #F8961E, #F8961E, #F9C74F, #90BE6D, #43AA8B);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: rainbow-text-animation 5s linear infinite;
+  animation: gradient 10s ease infinite;
 }
 
-@keyframes rainbow-text-animation {
+@keyframes gradient {
   0% {
-    background-position: 0%;
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 400%;
+    background-position: 0% 50%;
   }
 }
 
