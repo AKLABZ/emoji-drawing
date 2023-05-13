@@ -7,9 +7,10 @@ header {
   font-color: black;
   font-family: 'Open Sans', sans-serif;
   font-size: 36px;
-  font-weight: bold;
+  font-weight: normal;
   text-align: center;
   animation: gradient 10s ease infinite;
+  letter-spacing: -1px; 
 }
 
 
