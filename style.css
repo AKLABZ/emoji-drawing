@@ -4,9 +4,6 @@ html, body {
 }
 
 header {
-  background-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-family: 'Open Sans', sans-serif;
   font-size: 36px;
   font-weight: bold;
@@ -14,17 +11,6 @@ header {
   animation: gradient 10s ease infinite;
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
 #image-container {
   position: absolute;
