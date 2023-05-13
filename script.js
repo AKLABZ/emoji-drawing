@@ -70,5 +70,17 @@ document.body.addEventListener('touchmove', function(e) {
   }
 }, { passive: false });
 
-document.body.style.overflow = "hidden";
+
+interact('#image-container').gesturable({
+  onstart: function (event) {
+    event.preventDefault();
+  }
+});
+
+interact('#image-container').gesturable({
+  onmove: function (event) {
+    event.preventDefault();
+  }
+});
+
 
